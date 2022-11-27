@@ -1,0 +1,65 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--f-size);
+}
+
+.card-category {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: var(--border-radius);
+    padding: 5px;
+    font-weight: 100;
+    color: var(--c-light);
+    background-color: var(--c-green);
+}
+
+.card__image {
+    margin-top: 2rem;
+}
+
+.card__inner-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.card__description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: 0.8rem;
+    font-weight: 100;
+    padding: 0rem 1.5rem;
+    text-align: justify;
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    text-align: center;
+    color: var(--c-green);
+    font-size: 1rem;
+
+}
+
+.card__icon {
+    font-size: 20px;
+    margin-right: .5rem;
+}
+
+.card__price {
+    font-weight: 800;
+}
+
+.card__price::after {
+    content: '£';
+}
+
+/* .card:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+} */

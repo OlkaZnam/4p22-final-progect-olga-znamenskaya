@@ -1,0 +1,27 @@
+.checkbox__container {
+    margin-bottom: 1rem;
+}
+
+.checkbox__emulator {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border: var(--border);
+    margin-right: .35rem;
+}
+
+.checkbox__label {
+    line-height: 1;
+
+}
+
+.checkbox__control:checked~.checkbox__emulator::after {
+    opacity: 1;
+}
+
+.checkbox__emulator::after {
+    content: '✓';
+    opacity: 0;
+}

@@ -1,0 +1,39 @@
+.main-image__container {
+    height: 100vh;
+    width: 100%;
+    object-fit: contain;
+}
+
+.container__image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main-image__container .container__content {
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    top: 40vh;
+}
+
+.main-image__container .content__header {
+    font-size: 4rem;
+    color: var(--c-green);
+}
+
+.content__inner-text {
+    font-size: 1.8rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    color: var(--c-green);
+}
+
+.main-image__button {
+    margin: .5rem;
+}

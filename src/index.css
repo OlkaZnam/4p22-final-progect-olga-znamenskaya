@@ -1,13 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--f-family);
+  background: var(--c-light);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+p,
+a,
+h4 {
+  color: var(--c-green);
+}
+
+.visually-hidden {
+    position: absolute !important;
+    overflow: hidden !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    border: none !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+.button {
+  padding: 12px 22px;
+  font-size: var(--f-size);
+  color: var(--c-green);
+  text-transform: uppercase;
+  background: transparent;
+  border: var(--border);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+.button:hover {
+  color: var(--c-light);
+  background: var(--c-green)
 }

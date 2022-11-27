@@ -1,0 +1,28 @@
+.radios__emulator {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border: var(--border);
+    margin-right: .35rem;
+}
+
+.radios__label {
+    line-height: 1;
+
+}
+
+.radios__container {
+    margin: 1rem 0;
+}
+
+
+.radios__control:checked~.radios__emulator::after {
+    opacity: 1;
+}
+
+.radios__emulator::after {
+    content: '✓';
+    opacity: 0;
+}

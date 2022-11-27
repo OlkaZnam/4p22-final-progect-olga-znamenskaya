@@ -1,0 +1,35 @@
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 600px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    margin: 2rem auto;
+    color: var(--c-green);
+}
+
+.form-item__error {
+    color: red;
+}
+
+form label {
+    margin-bottom: .5rem;
+}
+
+form input,
+textarea {
+    margin-bottom: 1rem;
+    padding: 10px 18px;
+    font-size: 1.2rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.form-checkbox {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .8rem;
+    padding-bottom: .5rem;
+}

@@ -1,0 +1,25 @@
+.catalog-filter__input {
+    width: 100%;
+    height: 3rem;
+    margin: auto;
+    font-family: var(--f-family);
+    font-size: 1.5rem;
+    color: var(--c-light);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding-left: 1rem;
+}
+
+.catalog-filter__categories {
+    padding: 1rem 0rem;
+}
+
+.catalog-filter__category-button {
+    margin: .5rem .5rem;
+    font-size: 1rem;
+}
+
+.catalog-filter__category-button.is-active {
+    color: var(--c-light);
+    background-color: var(--c-green);
+}

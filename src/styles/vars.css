@@ -1,0 +1,15 @@
+:root {
+    --f-family: 'Outfit', sans-serif;
+    --f-size: 1.2rem;
+    --c-dark: rgb(0, 0, 0);
+    --c-light: rgb(255, 255, 255);
+    --c-light-transparent: rgb(255, 255, 255, .8);
+    --c-green: rgb(3, 57, 20);
+    --border: 1px solid  rgb(3, 57, 20);
+    --border-radius: 10px;
+
+}
+
+
+
+
