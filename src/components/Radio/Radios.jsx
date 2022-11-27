@@ -3,7 +3,6 @@ import './RadiosStyles.css'
 
 const Radios = (props) => {
     const {
-        className = '',
         name,
         items = [],
         label,
