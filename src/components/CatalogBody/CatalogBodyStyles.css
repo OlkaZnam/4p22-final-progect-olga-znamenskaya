@@ -13,10 +13,6 @@
 
 }
 
-/* .catalog-body__item:hover {
-    background: var(--c-dark);
-} */
-
 .catalog-body__empty-message {
     font-size: 2rem;
     color: var(--c-light);

@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { FaBars, FaTimes, FaSeedling } from 'react-icons/fa'
 
 import './NavbarStyles.css'
 
 const Navbar = () => {
+
+
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
@@ -21,26 +23,27 @@ const Navbar = () => {
 
     return (
         <div className={color ? 'header header__bg' : 'header'}>
-            <Link to='/'>
+            <NavLink
+                to='/'>
                 <h1>
                     <FaSeedling className='navigation-menu__icon' />
                     PP
                 </h1>
-            </Link>
+            </NavLink>
             <ul className={click ? 'navigation-menu active' : 'navigation-menu'}>
                 <li className='navigation-menu__item'>
-                    <Link className='item__link' to='/'>Home</Link>
+                    <NavLink className='item__link' to='/'>Home</NavLink>
                 </li>
                 <li className='navigation-menu__item'>
-                    <Link className='item__link' to='/catalog'>Catalog</Link>
+                    <NavLink className='item__link' to='/catalog'>Catalog</NavLink>
                 </li>
                 <li className='navigation-menu__item'>
-                    <Link className='item__link' to='/contact'>Contact Us</Link>
+                    <NavLink className='item__link' to='/contact'>Contact Us</NavLink>
                 </li>
                 <li className='navigation-menu__item'>
-                    <Link className='item__link' to='/basket'>Basket</Link>
+                    <NavLink className='item__link' to='/basket'>Basket</NavLink>
                 </li>
-                
+
             </ul>
             <div className='header__hamburger' onClick={handleClick}>
                 {click ? (<FaTimes className='hamburger__icon' />) : (<FaBars className='hamburger__icon' />)}

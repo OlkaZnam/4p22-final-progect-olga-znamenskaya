@@ -1,21 +1,44 @@
 .basket {
     margin: 2rem auto;
     font-size: 1.5rem;
-    color: var(--c-green)
+    color: var(--c-green);
+    font-weight: 400;
 }
 
 .basket__item {
     text-align: center;
-    font-weight: 900;
 }
 
-.basket__container {
+.basket__summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.basket__summary-info {
+    font-weight: 900;
+    margin: 1rem auto;
+}
+
+.basket__summary-submit-button {
+    color: var(--c-light);
+    background: var(--c-green);
+}
+
+.basket__summary-submit-button:hover {
+    color: var(--c-green);
+    background: var(--c-light);
+}
+
+.basket__empty-message {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    border: var(--border);
-    margin: auto 2rem;
-    border-radius: var(--border-radius);
-    padding: 1rem;
+}
+
+.empty-message__icon {
+    margin-left: .5rem;
+    color: var(--c-green);
+    font-size: 25px;
 }

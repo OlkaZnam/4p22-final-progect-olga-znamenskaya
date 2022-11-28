@@ -52,7 +52,3 @@
     font-weight: 900;
     padding-bottom: 2rem;
 }
-
-.product-description__price::after {
-    content: '£';
-}

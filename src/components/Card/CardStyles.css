@@ -17,6 +17,12 @@
     background-color: var(--c-green);
 }
 
+.card__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .card__image {
     margin-top: 2rem;
 }
@@ -56,10 +62,3 @@
     font-weight: 800;
 }
 
-.card__price::after {
-    content: '£';
-}
-
-/* .card:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-} */
