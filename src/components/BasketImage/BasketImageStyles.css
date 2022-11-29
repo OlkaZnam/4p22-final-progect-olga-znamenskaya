@@ -1,40 +1,39 @@
-.basket-img {
-    background: (0, 0, 0, .3);
+.basket-image {
+    position: relative;
     height: 30vh;
     width: 100%;
-    position: relative;
 }
 
-.basket-img::before {
-    content: '';
-    background: url('../../assets/wall.avif') no-repeat center center/cover;
-    height: 100%;
-    width: 100%;
+.basket-image::before {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background: url('../../assets/wall.avif') no-repeat center center/cover;
 }
 
-.basket-img .heading {
-    width: 100%;
-    height: 100%;
+.basket-image__body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-.basket-img h1 {
+.basket-image__heading {
     font-size: 2.4rem;
 }
 
-.basket-img p {
+.basket-image__text {
     font-size: 1.4rem;
 }
 
 @media screen and (max-width:640px) {
-    .basket-img h1 {
+    .basket-image__heading {
         font-size: 2rem;
     }
 }

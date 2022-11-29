@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Input from '../Input/Input'
-import './CatalogFilterStyles.css'
-
 import { defaultCategory } from '../Catalog/Catalog'
+import './CatalogFilterStyles.css'
 
 const CatalogFilter = (props) => {
     const {
@@ -12,6 +11,7 @@ const CatalogFilter = (props) => {
         activeCategory,
         setActiveCategory
     } = props
+
     const onInputChange = ({ target }) => {
         setSearchQuery(target.value)
     }
@@ -33,7 +33,6 @@ const CatalogFilter = (props) => {
 
             return (isCategoryTheSame || isDefaultCategory) && isNameIncludesSearchQuerry
         })
-
         setFilteredProducts(newFilteredProducts)
     }
 
@@ -44,7 +43,6 @@ const CatalogFilter = (props) => {
     return (
         <div className='catalog-filter'>
             < Input
-                className='catalog-filter__input'
                 placeholder='What are you looking for?'
                 value={searchQuery}
                 onChange={onInputChange}

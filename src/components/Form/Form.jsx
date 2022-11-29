@@ -24,7 +24,9 @@ const Form = () => {
             ...genderVariant,
             isChecked: genderVariant.id === id
         }))
+
         setGenderVariants(newGenderVariants)
+
         setFormData(() => ({
             ...formData,
             ["gender"]: id
@@ -42,8 +44,6 @@ const Form = () => {
     const [formError, setFormError] = useState({})
 
     const onChangeHandler = (event) => {
-
-
         if (event.target.name === 'agreement') {
             setAgreement(event.target.checked)
         }
@@ -53,7 +53,6 @@ const Form = () => {
             ...formData,
             [event.target.name]: event.target.value
         }))
-
     }
 
     const validateForm = () => {
@@ -70,7 +69,6 @@ const Form = () => {
                 err.email = 'Email not valid!'
             }
         }
-        console.log('gender', formData.gender)
         if (formData.gender === null) {
             err.gender = 'Gender required!'
         }
@@ -80,7 +78,6 @@ const Form = () => {
         if (formData.details === '') {
             err.details = 'Details required!'
         }
-
         if (!agreement) {
             err.agreement = 'Agreement required!'
         }
@@ -100,24 +97,48 @@ const Form = () => {
         } else {
             console.log('In-Valid Form')
         }
-        console.log(isValid)
     }
 
     return (
         <form className='form' onSubmit={onSubmitHandler}>
-
-            <span className='form-item__error'>{formError.username}</span>
-            <label className='form-item__label' htmlFor="username">Your Name</label>
-            <input name="username" onChange={onChangeHandler} value={formData.username}></input>
-
-            <span className='form-item__error'>{formError.email}</span>
-            <label htmlFor='email'>Email</label>
-            <input name='email' onChange={onChangeHandler} value={formData.email}></input>
-
-
+            <div className='form-item'>
+                <span className='form-item__error'>
+                    {formError.username}
+                </span>
+                <label
+                    className='form-item__label'
+                    htmlFor="username"
+                >
+                    Your Name
+                </label>
+                <input
+                    className='form-item__input'
+                    name="username"
+                    onChange={onChangeHandler}
+                    value={formData.username}
+                ></input>
+            </div>
 
             <div className='form-item'>
-                <span className='form-item__error'>{formError.gender}</span>
+                <span className='form-item__error'>
+                    {formError.email}
+                </span>
+                <label
+                    className='form-item__label'
+                    htmlFor='email'
+                >Email</label>
+                <input
+                    className='form-item__input'
+                    name='email'
+                    onChange={onChangeHandler}
+                    value={formData.email}
+                ></input>
+            </div>
+
+            <div className='form-item'>
+                <span className='form-item__error'>
+                    {formError.gender}
+                </span>
                 <Radios
                     name='gender'
                     label='Gender'
@@ -126,29 +147,49 @@ const Form = () => {
                 />
             </div>
 
-            <span className='form-item__error'>{formError.subject}</span>
-            <label htmlFor='subject'>Subject</label>
-            <input
-                className='form-item__input'
-                type='text'
-                name='subject'
-                onChange={onChangeHandler}
-                value={formData.subject}
-            />
-
-            <span className='form-item__error'>{formError.details}</span>
-            <label htmlFor='details'>Details</label>
-            <textarea
-                className='form-textarea'
-                rows='6'
-                name='details'
-                placeholder='Type a short message here'
-                onChange={onChangeHandler}
-                value={formData.details}
-            />
+            <div className='form-item'>
+                <span className='form-item__error'>
+                    {formError.subject}
+                </span>
+                <label
+                    className='form-item__label'
+                    htmlFor='subject'
+                >
+                    Subject
+                </label>
+                <input
+                    className='form-item__input'
+                    type='text'
+                    name='subject'
+                    onChange={onChangeHandler}
+                    value={formData.subject}
+                />
+            </div>
 
             <div className='form-item'>
-                <span className='form-item__error'>{formError.agreement}</span>
+                <span className='form-item__error'>
+                    {formError.details}
+                </span>
+                <label
+                    className='form-item__label'
+                    htmlFor='details'
+                >
+                    Details
+                </label>
+                <textarea
+                    className='form-item__textarea'
+                    rows='6'
+                    name='details'
+                    placeholder='Type a short message here'
+                    onChange={onChangeHandler}
+                    value={formData.details}
+                />
+            </div>
+
+            <div className='form-item'>
+                <span className='form-item__error'>
+                    {formError.agreement}
+                </span>
                 <Checkbox
                     name='agreement'
                     label='I consent to having Plants Planet collect my details.'
@@ -157,7 +198,12 @@ const Form = () => {
                 />
             </div>
 
-            <button className='form__button button' type='submit'>Submit</button>
+            <button
+                className='form__button button'
+                type='submit'
+            >
+                Submit
+            </button>
         </form>
     )
 }

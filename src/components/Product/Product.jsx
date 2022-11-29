@@ -1,11 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useState } from 'react'
-
 import { apiUrl } from '../Catalog/Catalog'
 import ProductDescription from '../ProductDescription/ProductDescription'
-
-import './ProductStyles.css'
 
 const Product = () => {
     const { id } = useParams()
@@ -35,8 +31,6 @@ const Product = () => {
         fetchProductInfo()
     }, [])
 
-
-
     if (isLoading) {
         return <div>Loading...</div>
     }
@@ -51,7 +45,6 @@ const Product = () => {
                 category={category}
                 description={description}
             />
-
         </div>
     )
 }

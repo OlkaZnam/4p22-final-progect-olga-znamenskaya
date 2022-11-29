@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from '../Card/Card'
 import { FaRegFrown } from 'react-icons/fa'
+import ProductCard from '../ProductCard/ProductCard'
 import './CatalogBodyStyles.css'
 
 const CatalogBody = (props) => {
@@ -26,7 +26,7 @@ const CatalogBody = (props) => {
 
                         return (
                             <li className='catalog-body__item' key={id}>
-                                <Card
+                                <ProductCard
                                     id={id}
                                     title={title}
                                     img={imageUrl}

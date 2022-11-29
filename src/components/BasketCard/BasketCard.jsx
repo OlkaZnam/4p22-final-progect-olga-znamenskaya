@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import Counter from '../Counter/Counter'
 import AppContext from '../../context'
+import Counter from '../Counter/Counter'
 import './BasketCardStyles.css'
 
 const BasketCard = (props) => {
@@ -23,6 +23,7 @@ const BasketCard = (props) => {
 
   return (
     <article className="basket-card">
+
       <img
         className="basket-card__image"
         src={img}
@@ -34,10 +35,9 @@ const BasketCard = (props) => {
 
       <div className="basket-card__title">{title}</div>
       <div className="basket-card__category">{category}</div>
-
-
-
-      <div className="basket-card__price-summary">Price: £{price.toFixed(2)}</div>
+      <div className="basket-card__price-summary">
+        Price: £{price.toFixed(2)}
+      </div>
 
       <Counter
         className="basket-card__counter"
@@ -45,8 +45,9 @@ const BasketCard = (props) => {
         onDecrease={() => decreaseBasketItem(id)}
         onIncrease={() => increaseBasketItem(id)}
       />
-      <div className="basket-card__total-price">Total: £{total}</div>
 
+      <div className="basket-card__total-price">Total: £{total}</div>
+      
       <button
         className="basket-card__remove-button button"
         title="Remove product"
@@ -55,7 +56,6 @@ const BasketCard = (props) => {
       >
         X
       </button>
-
     </article>
   )
 }

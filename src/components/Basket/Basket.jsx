@@ -1,30 +1,24 @@
 import React, { useContext, useEffect, useState } from 'react'
 import AppContext from '../../context'
-import './BasketStyles.css'
+import { FaRegSadTear } from 'react-icons/fa'
 import { apiUrl } from '../Catalog/Catalog'
 import BasketCard from '../BasketCard/BasketCard'
-import {FaRegSadTear} from 'react-icons/fa'
-
+import './BasketStyles.css'
 
 const Basket = () => {
     const { basketItems } = useContext(AppContext)
 
-    const uniqueBasketItems = Object.keys(basketItems).length
-
-    const totalAmount = Object.values(basketItems).reduce((total, amount) => total += amount, 0)
-
     const [products, setProducts] = useState([])
-
-    const [totalPrice, setTotalPrice] = useState(0)
 
     const updateProductsAmountValues = () => {
         const newProducts = products.map((product) => ({
             ...product,
             amount: basketItems[product.id]
         }))
-
         setProducts(newProducts)
     }
+
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const updateTotalPrice = () => {
         const newTotalPrice = products.reduce((total, { amount, price }) => total += amount * price, 0)
@@ -32,6 +26,10 @@ const Basket = () => {
 
         setTotalPrice(newTotalPriceFormatted)
     }
+
+    const uniqueBasketItems = Object.keys(basketItems).length
+
+    const totalAmount = Object.values(basketItems).reduce((total, amount) => total += amount, 0)
 
     const fetchProducts = () => {
         fetch(apiUrl)
@@ -41,9 +39,7 @@ const Basket = () => {
                 const newProducts = []
 
                 allProducts.forEach((product) => {
-
                     const id = product.id
-
                     const isExistInBasket = basketItems.hasOwnProperty(id)
 
                     if (isExistInBasket) {
@@ -53,7 +49,6 @@ const Basket = () => {
                         })
                     }
                 })
-
                 setProducts(newProducts)
             })
     }
@@ -106,6 +101,7 @@ const Basket = () => {
                     </div>
                 )}
             </div>
+
             <div className="basket__summary">
                 <div className="basket__summary-info">
                     Subtotal for {totalAmount} items: £{totalPrice}
@@ -115,9 +111,7 @@ const Basket = () => {
                 </button>
             </div>
         </div>
-
     )
-
 }
 
 export default Basket

@@ -4,10 +4,15 @@ import './ContactImageStyles.css'
 class ContactImage extends Component {
     render() {
         return (
-            <div className='contact-img'>
-                <div className='heading'>
-                    <h1>{this.props.heading}</h1>
-                    <p>{this.props.text}</p>
+            <div className='contact-image'>
+                <div className='contact-image__body'>
+                    <h1 className='contact-image__heading'>
+                        {this.props.heading}
+                    </h1>
+
+                    <p className='contact-image__text'>
+                        {this.props.text}
+                    </p>
                 </div>
             </div>
         )

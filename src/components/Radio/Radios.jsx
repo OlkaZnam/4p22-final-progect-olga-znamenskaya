@@ -3,7 +3,6 @@ import './RadiosStyles.css'
 
 const Radios = (props) => {
     const {
-        name,
         items = [],
         label,
         onChange
@@ -12,12 +11,12 @@ const Radios = (props) => {
 
     return (
         <div className='radios'>
-            <div className='radios__label'> {label}</div>
+            <div className='radios__label'>{label}</div>
             <ul className='radios__list'>
                 {items.map(({ id, label, isChecked }) => (
-
                     <li className='radios__item' key={id}>
                         <label className='radios__radio'>
+
                             <div className='radios__container'>
                                 <input
                                     className='radios__control visually-hidden'

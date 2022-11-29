@@ -5,11 +5,12 @@ import CatalogFilter from '../CatalogFilter/CatalogFilter'
 
 
 export const defaultCategory = 'All'
-export const apiUrl = 'http://127.0.0.1:9001/test'
+export const apiUrl = 'http://95.163.236.250:9001/kaktus'
 
 const Catalog = () => {
     const [products, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
+
     const [categories, SetCategories] = useState([defaultCategory])
     const [activeCategory, setActiveCategory] = useState([defaultCategory])
 
@@ -47,6 +48,7 @@ const Catalog = () => {
                 activeCategory={activeCategory}
                 setActiveCategory={setActiveCategory}
             />
+
             <CatalogBody products={filteredProducts} />
         </div>
     )

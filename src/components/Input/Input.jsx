@@ -3,7 +3,6 @@ import './InputStyles.css'
 
 const Input = (props) => {
     const {
-        className = '',
         placeholder,
         value,
         onChange
@@ -11,7 +10,7 @@ const Input = (props) => {
 
     return (
         <input
-            className={`${className} input`}
+            className='input'
             placeholder={placeholder}
             value={value}
             onChange={onChange}

@@ -18,7 +18,9 @@ const Counter = (props) => {
       >
         –
       </button>
+
       <div className="counter__value">{value}</div>
+
       <button
         className="counter__button counter__button--increase button"
         type="button"

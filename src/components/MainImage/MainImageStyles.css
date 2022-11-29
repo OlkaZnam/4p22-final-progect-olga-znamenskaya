@@ -1,39 +1,39 @@
-.main-image__container {
+.main-image {
     height: 100vh;
     width: 100%;
     object-fit: contain;
 }
 
-.container__image {
+.main-image__image {
     position: fixed;
+    z-index: -1;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
 }
 
-.main-image__container .container__content {
-    text-align: center;
+.main-image__container {
     position: absolute;
+    top: 40vh;
     margin: auto;
     width: 100%;
     height: 100%;
-    top: 40vh;
+    text-align: center;
 }
 
-.main-image__container .content__header {
+.container__heading {
     font-size: 4rem;
     color: var(--c-green);
 }
 
-.content__inner-text {
+.container__text {
+    margin-bottom: 1.6rem;
     font-size: 1.8rem;
     font-weight: 200;
     text-transform: uppercase;
-    margin-bottom: 1.6rem;
     color: var(--c-green);
 }
 
-.main-image__button {
+.container__button {
     margin: .5rem;
 }

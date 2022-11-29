@@ -6,13 +6,14 @@ import BackgroundImage from '../../assets/main.avif'
 
 const MainImage = () => {
     return (
-        <div className='main-image__container'>
-            <img className='container__image' src={BackgroundImage} alt='plants' loading='lazy' />
-            <div className='container__content'>
-                <h1 className='content__header'>Plants Planet</h1>
-                <p className='content__inner-text'>Here is an awesome houseplants shop!</p>
-                <Link to='/catalog' className='main-image__button button'>Catalog</Link>
-                <Link to='/contact' className='main-image__button button'>Contact Us</Link>
+        <div className='main-image'>
+            <img className='main-image__image' src={BackgroundImage} alt='plants' loading='lazy' />
+
+            <div className='main-image__container'>
+                <h1 className='container__heading'>Plants Planet</h1>
+                <p className='container__text'>Here is an awesome houseplants shop!</p>
+                <Link to='/catalog' className='container__button button'>Catalog</Link>
+                <Link to='/contact' className='container__button button'>Contact Us</Link>
             </div>
         </div>
     )

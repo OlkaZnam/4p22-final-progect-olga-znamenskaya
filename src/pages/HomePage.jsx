@@ -1,13 +1,12 @@
 import React from 'react'
 import MainImage from '../components/MainImage/MainImage'
-import Navbar from '../components/Navbar/Navbar'
+import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
-
 
 const HomePage = () => {
   return (
     <div>
-      <Navbar />
+      <Header />
       <MainImage />
       <Footer />
     </div>

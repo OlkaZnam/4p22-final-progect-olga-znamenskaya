@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbar'
+import Header from '../components/Header/Header'
 import ContactImage from '../components/ContactImage/ContactImage'
 import Form from '../components/Form/Form'
 import Footer from '../components/Footer/Footer'
@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer'
 const ContactPage = () => {
     return (
         <div>
-            <Navbar />
+            <Header />
             <ContactImage heading='CONTACT US' text='We’re here to answer any questions!' />
             <Form />
             <Footer />

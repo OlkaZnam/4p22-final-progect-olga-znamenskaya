@@ -4,10 +4,15 @@ import './CatalogImageStyles.css'
 class CatalogImage extends Component {
     render() {
         return (
-            <div className='catalog-img'>
-                <div className='heading'>
-                    <h1>{this.props.heading}</h1>
-                    <p>{this.props.text}</p>
+            <div className='catalog-image'>
+                <div className='catalog-image__body'>
+                    <h1 className='catalog-image__heading'>
+                        {this.props.heading}
+                    </h1>
+
+                    <p className='catalog-image__text'>
+                        {this.props.text}
+                    </p>
                 </div>
             </div>
         )

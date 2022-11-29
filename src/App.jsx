@@ -1,32 +1,19 @@
 import React, { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
-
+import AppContext from './context'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import CatalogPage from './pages/CatalogPage'
 import ContactPage from './pages/ContactPage'
 import ProductPage from './pages/ProductPage'
 import BasketPage from './pages/BasketPage'
-import { BrowserRouter } from 'react-router-dom'
-import AppContext from './context'
 
 function App() {
-
   const [basketItems, setBasketItems] = useState({})
 
   const addToBasket = (id) => {
     const newBasketItems = { ...basketItems }
-    /**
-     * Проверяем наличие в объекте 'basketItems'
-     * элемента с ключом 'id' через метод объекта 'hasOwnProperty',
-     * возвращающий true, если элемент в объекте по переданному ключу существует
-     */
     const isAlreadyExistInBasket = newBasketItems.hasOwnProperty(id)
 
-    /**
-     * В зависимости от существования товара в корзине,
-     * либо увеличиваем значение на +1,
-     * либо устанавливаем новое со значением 1
-     */
     isAlreadyExistInBasket
       ? newBasketItems[id] += 1
       : newBasketItems[id] = 1
@@ -37,9 +24,6 @@ function App() {
   const removeFromBasket = (id) => {
     const newBasketItems = { ...basketItems }
 
-    /**
-     * Удаляем из копии объекта basketItems элемент по ключу 'id'
-     */
     delete newBasketItems[id]
 
     setBasketItems(newBasketItems)
@@ -60,7 +44,6 @@ function App() {
     setBasketItems(newBasketItems)
   }
 
-
   const increaseBasketItem = (id) => {
     changeBasketAmount(id)
   }
@@ -69,10 +52,7 @@ function App() {
     changeBasketAmount(id, false)
   }
 
-
-
   return (
-
     <AppContext.Provider
       value={{
         basketItems,
@@ -82,6 +62,7 @@ function App() {
         increaseBasketItem,
         decreaseBasketItem
       }}>
+
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage />} />
@@ -92,7 +73,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </AppContext.Provider>
-
   )
 }
 

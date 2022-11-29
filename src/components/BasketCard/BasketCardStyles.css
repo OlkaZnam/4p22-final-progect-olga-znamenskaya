@@ -1,14 +1,14 @@
 .basket-card {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border: var(--border);
     margin: 1rem 2rem;
-    border-radius: var(--border-radius);
     padding: 1rem;
     font-size: 18px;
-    position: relative;
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 
 .basket-card__total-price {
@@ -39,9 +39,8 @@
     }
 
     .basket-card {
-        width: 400px;
-        flex-direction: column;
         position: relative;
+        flex-direction: column;
+        width: 400px;
     }
-
 }
