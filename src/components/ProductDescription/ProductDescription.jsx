@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import AppContext from '../../context'
 import { FaShoppingCart } from 'react-icons/fa'
+import Counter from '../Counter/Counter'
 import './ProductDescriptionStyles.css'
 
 const ProductDescription = (props) => {
@@ -13,7 +14,16 @@ const ProductDescription = (props) => {
         description
     } = props
 
-    const { addToBasket } = useContext(AppContext)
+    const {
+        basketItems,
+        addToBasket,
+        increaseBasketItem,
+        decreaseBasketItem
+    } = useContext(AppContext)
+
+    const amount = basketItems[id] ?? 0
+    const isExistInBasket = amount > 0
+
     const onBuyButtonClick = () => { addToBasket(id) }
 
     return (
@@ -33,6 +43,14 @@ const ProductDescription = (props) => {
 
             <div className='product-description__info'>{description}</div>
             <div className='product-description__price'>Price: £{price}</div>
+
+            {isExistInBasket && (
+                <Counter
+                    value={amount}
+                    onIncrease={() => increaseBasketItem(id)}
+                    onDecrease={() => decreaseBasketItem(id)}
+                />
+            )}
 
             <button
                 className='product-description__button button'

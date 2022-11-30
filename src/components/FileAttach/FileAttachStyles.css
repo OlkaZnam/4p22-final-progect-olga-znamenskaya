@@ -1,0 +1,25 @@
+.file-attach {
+    margin-bottom: 1rem;
+    max-width: 200px;
+    border: 1px dashed var(--c-green);
+    display: block;
+    padding: .6rem;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center
+}
+
+.file-attach:hover {
+    border: 1px solid var(--c-green)
+}
+
+.file-attach__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-attach__icon {
+    margin-right: .5rem;
+}

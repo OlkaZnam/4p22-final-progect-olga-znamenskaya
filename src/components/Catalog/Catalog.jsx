@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import './CatalogStyles.css'
+import { useSearchParams } from 'react-router-dom'
 import CatalogBody from '../CatalogBody/CatalogBody'
 import CatalogFilter from '../CatalogFilter/CatalogFilter'
-
+import Pagination from '../Pagination/Pagination'
+import './CatalogStyles.css'
 
 export const defaultCategory = 'All'
 export const apiUrl = 'http://95.163.236.250:9001/kaktus'
@@ -13,6 +14,20 @@ const Catalog = () => {
 
     const [categories, SetCategories] = useState([defaultCategory])
     const [activeCategory, setActiveCategory] = useState([defaultCategory])
+
+    const itemsPerPage = 9
+
+    const [searchParams, setSearchParams] = useSearchParams()
+
+    const page = parseInt(searchParams.get('page') ?? 1)
+
+    const filteredVisibleProducts = filteredProducts.slice((page - 1) * itemsPerPage, page * itemsPerPage)
+
+    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage)
+
+    const setPageNumber = (pageNumber) => {
+        setSearchParams({ page: pageNumber.toString() })
+    }
 
     const getCategoriesFromProducts = (products) => {
         const allCategoryNames = products.map(({ category }) => category)
@@ -49,7 +64,13 @@ const Catalog = () => {
                 setActiveCategory={setActiveCategory}
             />
 
-            <CatalogBody products={filteredProducts} />
+            <CatalogBody products={filteredVisibleProducts} />
+
+            <Pagination
+                totalPages={totalPages}
+                currentPage={page}
+                setPageNumber={setPageNumber}
+            />
         </div>
     )
 }

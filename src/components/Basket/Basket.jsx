@@ -65,8 +65,13 @@ const Basket = () => {
         updateTotalPrice()
     }, [products])
 
+    const onSubmitHandler = (event) => {
+        event.preventDefault()
+        console.log("Products:", products)
+    }
+
     return (
-        <div className="basket">
+        <form className="basket" onSubmit={onSubmitHandler}>
             <div className="basket__body">
                 {products.length ? (
                     <ul className="basket__list">
@@ -106,11 +111,11 @@ const Basket = () => {
                 <div className="basket__summary-info">
                     Subtotal for {totalAmount} items: £{totalPrice}
                 </div>
-                <button className="basket__summary-submit-button button" type="button">
+                <button className="basket__summary-submit-button button" type='submit'>
                     Place an order
                 </button>
             </div>
-        </div>
+        </form>
     )
 }
 

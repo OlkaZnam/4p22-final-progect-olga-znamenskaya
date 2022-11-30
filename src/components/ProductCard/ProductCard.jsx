@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import AppContext from '../../context'
 import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
+import Counter from '../Counter/Counter'
 import './ProductCardStyles.css'
 
 const ProductCard = (props) => {
@@ -16,7 +17,16 @@ const ProductCard = (props) => {
 
     const href = `/catalog/${id}`
 
-    const { addToBasket } = useContext(AppContext)
+    const {
+        basketItems,
+        addToBasket,
+        increaseBasketItem,
+        decreaseBasketItem
+    } = useContext(AppContext)
+
+    const amount = basketItems[id] ?? 0
+    const isExistInBasket = amount > 0
+
     const onBuyButtonClick = () => { addToBasket(id) }
 
     return (
@@ -47,6 +57,14 @@ const ProductCard = (props) => {
                     <div className='product-card__price'>£{price}</div>
                 </div>
             </Link>
+
+            {isExistInBasket && (
+                <Counter
+                    value={amount}
+                    onIncrease={() => increaseBasketItem(id)}
+                    onDecrease={() => decreaseBasketItem(id)}
+                />
+            )}
 
             <button
                 className='product-card__button button'

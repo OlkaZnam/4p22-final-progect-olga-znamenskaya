@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Checkbox from '../Checkbox/Checkbox'
+import FileAttach from '../FileAttach/FileAttach'
 import Radios from '../Radio/Radios'
 import './FormStyles.css'
 
@@ -187,6 +188,12 @@ const Form = () => {
             </div>
 
             <div className='form-item'>
+                <FileAttach 
+                 onChange = {(event) => console.log(event)}
+                />
+            </div>
+
+            <div className='form-item'>
                 <span className='form-item__error'>
                     {formError.agreement}
                 </span>
@@ -197,6 +204,9 @@ const Form = () => {
                     onChange={onChangeHandler}
                 />
             </div>
+
+           
+
 
             <button
                 className='form__button button'

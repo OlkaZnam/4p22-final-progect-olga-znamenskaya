@@ -5,7 +5,7 @@
     height: 3rem;
     font-family: var(--f-family);
     font-size: 1.5rem;
-    color: var(--c-light);
+    color: var(--c-green);
     border: var(--border);
     border-radius: var(--border-radius);
 }

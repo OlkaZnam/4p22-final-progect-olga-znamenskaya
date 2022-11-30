@@ -38,6 +38,8 @@ function App() {
       const currentAmount = newBasketItems[id]
       if (currentAmount > 1) {
         newBasketItems[id]--
+      } else {
+        delete newBasketItems[id]
       }
     }
 
