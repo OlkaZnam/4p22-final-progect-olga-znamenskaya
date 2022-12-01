@@ -58,24 +58,25 @@ const ProductCard = (props) => {
                 </div>
             </Link>
 
-            {isExistInBasket && (
-                <Counter
-                    value={amount}
-                    onIncrease={() => increaseBasketItem(id)}
-                    onDecrease={() => decreaseBasketItem(id)}
-                />
-            )}
-
-            <button
-                className='product-card__button button'
-                type='button'
-                onClick={() => onBuyButtonClick()}
-            >
-                <FaShoppingCart className='product-card__icon' />
-                <span>Add to basket</span>
-            </button>
+            {isExistInBasket ? (
+                <div className='product-card__counter'>
+                    <span>In basket:</span>
+                    <Counter
+                        value={amount}
+                        onIncrease={() => increaseBasketItem(id)}
+                        onDecrease={() => decreaseBasketItem(id)}
+                    />
+                </div>
+            ) : (
+                <button
+                    className='product-card__button button'
+                    type='button'
+                    onClick={() => onBuyButtonClick()}
+                >
+                    <FaShoppingCart className='product-card__icon' />
+                    <span>Add to basket</span>
+                </button>)}
         </article >
-
     )
 }
 

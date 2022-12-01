@@ -37,3 +37,9 @@
 .container__button {
     margin: .5rem;
 }
+
+.container__button:hover {
+    color: var(--c-light);
+    background: var(--c-green);
+    transition: .3s;
+}

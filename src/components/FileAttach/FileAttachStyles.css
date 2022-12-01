@@ -10,7 +10,8 @@
 }
 
 .file-attach:hover {
-    border: 1px solid var(--c-green)
+    border: 2px solid var(--c-green);
+    transition: .3s;
 }
 
 .file-attach__body {

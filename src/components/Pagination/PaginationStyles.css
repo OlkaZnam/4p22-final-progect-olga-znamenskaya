@@ -14,3 +14,8 @@
     color: var(--c-light);
     background-color: var(--c-green);
 }
+
+.pagination__button:disabled {
+    border: 1px solid grey;
+    color: grey;
+}

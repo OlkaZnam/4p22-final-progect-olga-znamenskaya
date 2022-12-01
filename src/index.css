@@ -12,6 +12,14 @@ h4 {
   color: var(--c-green);
 }
 
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  border: 2px solid var(--c-green);
+  outline: 0;
+}
+
 .visually-hidden {
   position: absolute !important;
   overflow: hidden !important;
@@ -34,7 +42,8 @@ h4 {
 }
 
 
-.button:hover {
+.button:hover:enabled {
   color: var(--c-light);
-  background: var(--c-green)
+  background: var(--c-green);
+  transition: .3s;
 }

@@ -29,7 +29,6 @@ const CatalogFilter = (props) => {
             const nameFormatted = title.toLowerCase()
             const searchQueryFormatted = searchQuery.toLowerCase()
             const isNameIncludesSearchQuerry = nameFormatted.includes(searchQueryFormatted)
-            console.log(defaultCategory)
 
             return (isCategoryTheSame || isDefaultCategory) && isNameIncludesSearchQuerry
         })

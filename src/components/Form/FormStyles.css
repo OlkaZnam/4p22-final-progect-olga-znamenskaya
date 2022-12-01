@@ -31,3 +31,13 @@
     color: var(--c-green);
     border: var(--border);
 }
+
+.form-item__textarea::placeholder {
+    font-weight: 100;
+}
+
+.form-item__input:hover,
+.form-item__textarea:hover {
+    border: 2px solid var(--c-green);
+    transition: .3s;
+}

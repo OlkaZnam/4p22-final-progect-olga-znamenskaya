@@ -48,8 +48,6 @@ const Form = () => {
         if (event.target.name === 'agreement') {
             setAgreement(event.target.checked)
         }
-        if (event.target.name === 'gender')
-            console.log('Change Handler', event.target.value)
         setFormData(() => ({
             ...formData,
             [event.target.name]: event.target.value
@@ -186,10 +184,9 @@ const Form = () => {
                     value={formData.details}
                 />
             </div>
-
             <div className='form-item'>
-                <FileAttach 
-                 onChange = {(event) => console.log(event)}
+                <FileAttach
+                    onChange={(event) => console.log(event)}
                 />
             </div>
 
@@ -205,7 +202,7 @@ const Form = () => {
                 />
             </div>
 
-           
+
 
 
             <button

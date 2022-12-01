@@ -11,9 +11,9 @@ const CatalogBody = (props) => {
     const hasProducts = products.length > 0
 
     return (
-        <div className='catalog-body'>
+        <div className="catalog-body">
             {hasProducts ? (
-                <ul className='catalog-body__list'>
+                <ul className="catalog-body__list">
                     {products.map((product) => {
                         const {
                             id,

@@ -97,7 +97,8 @@ const Basket = () => {
                                     />
                                 </li>
                             )
-                        })}
+                        }
+                        )}
                     </ul>
                 ) : (
                     <div className="basket__empty-message">

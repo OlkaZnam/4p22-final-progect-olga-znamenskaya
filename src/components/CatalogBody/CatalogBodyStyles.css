@@ -12,15 +12,23 @@
     border-radius: var(--border-radius);
 }
 
+.catalog-body__item:hover {
+    border: 2px solid var(--c-green);
+    transition: .3s;
+}
+
 .catalog-body__empty-message {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
-    color: var(--c-light);
+    color: var(--c-green);
 }
 
 .catalog-body__icon {
     margin-left: 1rem;
-    color: var(--c-light);
+    color: var(--c-green);
 }
 
 @media screen and (max-width: 768px) {

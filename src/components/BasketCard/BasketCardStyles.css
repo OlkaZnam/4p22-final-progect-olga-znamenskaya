@@ -30,6 +30,7 @@
 .basket-card__remove-button:hover {
     color: var(--c-green);
     background: var(--c-light);
+    transition: .3s;
 }
 
 @media screen and (max-width: 768px) {

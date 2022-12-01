@@ -36,6 +36,7 @@
 
 .item__link:hover {
     font-weight: 900;
+    transition: .3s;
 }
 
 

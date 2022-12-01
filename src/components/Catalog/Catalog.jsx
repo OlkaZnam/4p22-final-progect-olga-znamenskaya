@@ -10,10 +10,11 @@ export const apiUrl = 'http://95.163.236.250:9001/kaktus'
 
 const Catalog = () => {
     const [products, setProducts] = useState([])
-    const [filteredProducts, setFilteredProducts] = useState([])
 
     const [categories, SetCategories] = useState([defaultCategory])
-    const [activeCategory, setActiveCategory] = useState([defaultCategory])
+    const [activeCategory, setActiveCategory] = useState(defaultCategory)
+
+    const [filteredProducts, setFilteredProducts] = useState([])
 
     const itemsPerPage = 9
 
