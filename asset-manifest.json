@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/4p22-final-progect-olga-znamenskaya/static/css/main.073c9b0a.css",
-    "main.js": "/4p22-final-progect-olga-znamenskaya/static/js/main.55a7e48e.js",
-    "static/js/787.385d97a6.chunk.js": "/4p22-final-progect-olga-znamenskaya/static/js/787.385d97a6.chunk.js",
-    "static/media/logo.svg": "/4p22-final-progect-olga-znamenskaya/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/4p22-final-progect-olga-znamenskaya/index.html",
-    "main.073c9b0a.css.map": "/4p22-final-progect-olga-znamenskaya/static/css/main.073c9b0a.css.map",
-    "main.55a7e48e.js.map": "/4p22-final-progect-olga-znamenskaya/static/js/main.55a7e48e.js.map",
-    "787.385d97a6.chunk.js.map": "/4p22-final-progect-olga-znamenskaya/static/js/787.385d97a6.chunk.js.map"
+    "main.css": "/static/css/main.181efca3.css",
+    "main.js": "/static/js/main.425e690d.js",
+    "static/media/pencils.jpg": "/static/media/pencils.f04bdc196d9c7b85e9be.jpg",
+    "static/media/romashki1.jpg": "/static/media/romashki1.65dba945d4682cbddf41.jpg",
+    "static/media/basket.jpg": "/static/media/basket.1ba7a0cb55dc6cdda974.jpg",
+    "static/media/main.avif": "/static/media/main.7d7185a396d54038155e.avif",
+    "index.html": "/index.html",
+    "main.181efca3.css.map": "/static/css/main.181efca3.css.map",
+    "main.425e690d.js.map": "/static/js/main.425e690d.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.55a7e48e.js"
+    "static/css/main.181efca3.css",
+    "static/js/main.425e690d.js"
   ]
 }
