@@ -6,7 +6,8 @@ import Pagination from '../Pagination/Pagination'
 import './CatalogStyles.css'
 
 export const defaultCategory = 'All'
-export const apiUrl = 'http://95.163.236.250:9001/kaktus'
+
+export const apiUrl = 'https://shadyrun.ru/'
 
 const Catalog = () => {
     const [products, setProducts] = useState([])
@@ -40,9 +41,7 @@ const Catalog = () => {
         fetch(apiUrl)
             .then((response) => response.json())
             .then((result) => {
-                const newProducts = result.map((product) => ({
-                    ...product
-                }))
+                const newProducts = result
                 const newCategories = getCategoriesFromProducts(newProducts)
                 setProducts(newProducts)
                 setFilteredProducts(newProducts)
