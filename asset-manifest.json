@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/4p22-final-progect-olga-znamenskaya/static/css/main.13d2d15b.css",
-    "main.js": "/4p22-final-progect-olga-znamenskaya/static/js/main.f4100d4f.js",
+    "main.js": "/4p22-final-progect-olga-znamenskaya/static/js/main.ba473dd0.js",
     "static/media/pencils.jpg": "/4p22-final-progect-olga-znamenskaya/static/media/pencils.f04bdc196d9c7b85e9be.jpg",
     "static/media/romashki1.jpg": "/4p22-final-progect-olga-znamenskaya/static/media/romashki1.65dba945d4682cbddf41.jpg",
     "static/media/basket.jpg": "/4p22-final-progect-olga-znamenskaya/static/media/basket.1ba7a0cb55dc6cdda974.jpg",
     "static/media/main.avif": "/4p22-final-progect-olga-znamenskaya/static/media/main.7d7185a396d54038155e.avif",
     "index.html": "/4p22-final-progect-olga-znamenskaya/index.html",
     "main.13d2d15b.css.map": "/4p22-final-progect-olga-znamenskaya/static/css/main.13d2d15b.css.map",
-    "main.f4100d4f.js.map": "/4p22-final-progect-olga-znamenskaya/static/js/main.f4100d4f.js.map"
+    "main.ba473dd0.js.map": "/4p22-final-progect-olga-znamenskaya/static/js/main.ba473dd0.js.map"
   },
   "entrypoints": [
     "static/css/main.13d2d15b.css",
-    "static/js/main.f4100d4f.js"
+    "static/js/main.ba473dd0.js"
   ]
 }
