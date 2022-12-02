@@ -7,8 +7,7 @@ import './CatalogStyles.css'
 
 export const defaultCategory = 'All'
 
-export const apiUrl = 'https://shadyrun.alaiya.ru/kaktusss'
-// export const apiUrl = `/${process.env.PUBLIC_URL}./API.json`
+export const apiUrl = 'https://shadyrun.alaiya.ru/kaktus'
 
 const Catalog = () => {
     const [products, setProducts] = useState([])
