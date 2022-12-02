@@ -7,7 +7,7 @@ import './CatalogStyles.css'
 
 export const defaultCategory = 'All'
 
-export const apiUrl = 'https://shadyrun.ruгг/'
+export const apiUrl = 'https://shadyrun.ru/'
 
 const Catalog = () => {
     const [products, setProducts] = useState([])
